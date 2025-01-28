@@ -6,6 +6,6 @@ export class InfoService {
   constructor(private readonly i18n: YcI18nService) {}
 
   getInfo() {
-    return this.i18n.t('common.about');
+    return this.i18n.t('common.testing');
   }
 }

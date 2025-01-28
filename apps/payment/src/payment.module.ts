@@ -6,7 +6,7 @@ import {
   AcceptLanguageResolver,
   HeaderResolver,
   I18nModule,
-  I18nYamlLoader,
+  // I18nYamlLoader,
 } from 'nestjs-i18n';
 import { YcI18nModule } from './yc-i18n/yc-i18n.module';
 import * as path from 'node:path';
@@ -16,8 +16,7 @@ import * as path from 'node:path';
     InfoModule,
     I18nModule.forRoot({
       fallbackLanguage: 'en',
-      loader: I18nYamlLoader,
-
+      // loader: I18nYamlLoader,
       loaderOptions: {
         path: path.join(__dirname, '/locales/'),
         watch: true,
@@ -26,10 +25,7 @@ import * as path from 'node:path';
         AcceptLanguageResolver,
         { use: HeaderResolver, options: ['x-lang'] },
       ],
-      typesOutputPath: path.join(
-        __dirname,
-        '../src/generated/i18n.generated.ts',
-      ),
+      typesOutputPath: './apps/payment/src/generated/i18n.generated.ts',
     }),
     YcI18nModule,
   ],
