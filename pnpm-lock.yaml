@@ -44,6 +44,9 @@ importers:
       envnest:
         specifier: ^0.0.14
         version: 0.0.14(@nestjs/config@4.0.0(@nestjs/common@10.4.15(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(rxjs@7.8.1))(typescript@5.7.3)(zod@3.24.1)
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
       nestjs-i18n:
         specifier: ^10.5.0
         version: 10.5.0(@nestjs/common@10.4.15(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.15)(class-validator@0.14.1)(rxjs@7.8.1)
