@@ -4,6 +4,7 @@ This architecture is being created by Nischal Dahal<https://nischal-dahal.com.np
 
 Todo:
 
+- [ ] Multi staged environment
 - [ ] Add authentication & roles
 - [ ] Add logging
 - [ ] Add error handling
@@ -17,7 +18,7 @@ Todo:
 - [ ] Add monitoring
 - [ ] Add documentation
 
-Todo Features:
+Features:
 
 - [ ] Add user management
 - [ ] Add role management
