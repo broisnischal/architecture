@@ -60,6 +60,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/notification/tsconfig.app.json"
       }
+    },
+    "mobile": {
+      "type": "application",
+      "root": "apps/mobile",
+      "entryFile": "main",
+      "sourceRoot": "apps/mobile/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/mobile/tsconfig.app.json"
+      }
     }
   }
 }

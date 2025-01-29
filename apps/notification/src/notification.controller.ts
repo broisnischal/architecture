@@ -32,6 +32,8 @@ export class NotificationController {
       lang: data.lang,
     });
 
+    console.log(message);
+
     return {
       cool: message,
       about: this.i18n.t('common.about'),

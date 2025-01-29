@@ -21,6 +21,9 @@ export class InfoService {
         lang: this.i18n.lang(),
       })
       .pipe(timeout(1000));
+
+    console.log(data);
+
     return data;
   }
 }

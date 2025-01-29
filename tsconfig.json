@@ -20,11 +20,16 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@app/common": ["libs/common/src"],
+      "@app/common": [
+        "libs/common/src"
+      ],
       "@app/common/*": [
         "libs/common/src/*"
-      ],
+      ]
     }
   },
-  "exclude": ["dist", "node_modules"]
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }
