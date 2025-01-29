@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { I18nContext, I18nService } from 'nestjs-i18n';
-import { I18nPath, I18nTranslations } from '../generated/i18n.generated';
+import { I18nPath, I18nTranslations } from 'libs/generated/i18n.generated';
 
-export type SupportedLang = 'en' | 'ar';
+export type SupportedLang = 'en' | 'ar' | 'ne';
 export const defaultLang: SupportedLang = 'en';
 
 @Injectable()
@@ -18,5 +18,12 @@ export class YcI18nService {
 
   lang(): SupportedLang {
     return (I18nContext.current()?.lang || defaultLang) as SupportedLang;
+  }
+
+  translate(key: I18nPath, options?: Record<string, any>): string {
+    return this.i18n.translate(key, {
+      lang: this.lang(),
+      ...options,
+    }) as string;
   }
 }

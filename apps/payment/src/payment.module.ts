@@ -8,26 +8,34 @@ import {
   I18nModule,
   // I18nYamlLoader,
 } from 'nestjs-i18n';
-import { YcI18nModule } from './yc-i18n/yc-i18n.module';
 import * as path from 'node:path';
+import { ConfigModule } from '@nestjs/config';
+import { envService } from 'libs/external/env.config';
+import { ClientsModule, Transport } from '@nestjs/microservices';
+import { YcI18nModule } from '@app/common/yc-i18n/yc-i18n.module';
+import { CommonModule } from '@app/common/common.module';
 
 @Module({
   imports: [
-    InfoModule,
-    I18nModule.forRoot({
-      fallbackLanguage: 'en',
-      // loader: I18nYamlLoader,
-      loaderOptions: {
-        path: path.join(__dirname, '/locales/'),
-        watch: true,
-      },
-      resolvers: [
-        AcceptLanguageResolver,
-        { use: HeaderResolver, options: ['x-lang'] },
-      ],
-      typesOutputPath: './apps/payment/src/generated/i18n.generated.ts',
+    CommonModule,
+    ConfigModule.forRoot({
+      isGlobal: true,
+      validate: envService.validateConfig,
     }),
-    YcI18nModule,
+    // ClientsModule.register([
+    //   {
+    //     name: 'NOTIFICATION',
+    //     transport: Transport.RMQ,
+    //     options: {
+    //       urls: ['amqp://localhost:5672'],
+    //       queue: 'notification_queue',
+    //       queueOptions: {
+    //         // durable: false,
+    //       },
+    //     },
+    //   },
+    // ]),
+    InfoModule,
   ],
   controllers: [PaymentController],
   providers: [PaymentService],

@@ -5,6 +5,20 @@
 import { Path } from "nestjs-i18n";
 /* prettier-ignore */
 export type I18nTranslations = {
+    "auth": {
+        "login": {
+            "title": string;
+            "email": string;
+            "password": string;
+        };
+        "register": {
+            "message": {
+                "create": string;
+                "update": string;
+                "delete": string;
+            };
+        };
+    };
     "common": {
         "about": string;
         "testing": string;
