@@ -4,7 +4,6 @@
   "sourceRoot": "apps/payment/src",
   "compilerOptions": {
     "webpack": true,
-    "builder": "webpack",
     "deleteOutDir": true,
     "tsConfigPath": "apps/payment/tsconfig.app.json",
     "assets": [
