@@ -46,7 +46,7 @@ Impl:
 Devops:
 
 - [ ] actions
-- [ ] infra
+- [ ] infra ( terraform , ingress, loadbalancer, etc )
 - [ ] kubernetes
 - [ ] docker
 - [ ] caddy
