@@ -37,7 +37,7 @@
     "drizzle-orm": "^0.39.0",
     "envnest": "^0.0.14",
     "graphql": "^16.10.0",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "nestjs-i18n": "^10.5.0",
     "nestjs-zod": "^4.2.0",
     "pg": "^8.13.1",
